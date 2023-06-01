@@ -1,12 +1,15 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import SideMenu from './components/SideMenu'
+import React, {  lazy } from 'react'
+
+const SideMenuLayout = lazy(() => import('./layouts/SideMenuLayout'))
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: (
       <div style={{ display: 'flex' }}>
-        <SideMenu />
+        <SideMenuLayout />
         <h1>Home</h1>
       </div>
     ),
